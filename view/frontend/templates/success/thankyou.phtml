@@ -1,0 +1,32 @@
+<?php /** @var \Octocub\OneStepCheckout\Block\Success\ThankYou $block */ ?>
+<?php if (!$block->enabled()) return; ?>
+
+<?php $orderId = $block->getOrderId(); ?>
+<div class="octocub-thankyou">
+  <h2><?= $block->escapeHtml(__('Thank you for your purchase!')) ?></h2>
+
+  <?php if ($orderId): ?>
+    <p><?= $block->escapeHtml(__('Your order number is: %1', $orderId)) ?></p>
+  <?php endif; ?>
+
+  <div class="octocub-thankyou__next">
+    <h3><?= $block->escapeHtml(__('What’s next?')) ?></h3>
+    <ul>
+      <li><?= $block->escapeHtml(__('You will receive an order confirmation email shortly.')) ?></li>
+      <li><?= $block->escapeHtml(__('We’ll notify you when your order ships.')) ?></li>
+    </ul>
+  </div>
+
+  <div class="octocub-thankyou__share">
+    <h3><?= $block->escapeHtml(__('Share')) ?></h3>
+    <p><?= $block->escapeHtml(__('Tell your friends about your purchase:')) ?></p>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=<?= $block->escapeUrl($block->getBaseUrl()) ?>" target="_blank" rel="noopener">Facebook</a>
+    |
+    <a href="https://twitter.com/intent/tweet?url=<?= $block->escapeUrl($block->getBaseUrl()) ?>" target="_blank" rel="noopener">X</a>
+  </div>
+
+  <div class="octocub-thankyou__related">
+    <h3><?= $block->escapeHtml(__('Recommended products')) ?></h3>
+    <p><?= $block->escapeHtml(__('Add a related products block here (cross-sell/up-sell).')) ?></p>
+  </div>
+</div>

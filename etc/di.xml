@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="octocub_osc_layout_processor"
+                type="Octocub\OneStepCheckout\Plugin\Checkout\LayoutProcessor"/>
+    </type>
+
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="octocub_osc_save_delivery_to_quote"
+                type="Octocub\OneStepCheckout\Plugin\Checkout\SaveDeliveryToQuote"/>
+    </type>
+
+</config>

@@ -1,0 +1,6 @@
+<?php /** @var \Octocub\OneStepCheckout\Block\Checkout\SecurityBadges $block */ ?>
+<?php if ($block->canShow()): ?>
+  <div class="octocub-osc-security-badges" aria-label="Security badges">
+    <?= /* trusted HTML from admin */ $block->getBadgesHtml(); ?>
+  </div>
+<?php endif; ?>

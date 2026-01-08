@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<acl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <resources>
+        <resource id="Magento_Backend::admin">
+            <resource id="Octocub_OneStepCheckout::config" title="Octocub One Step Checkout Config" sortOrder="10"/>
+        </resource>
+    </resources>
+</acl>

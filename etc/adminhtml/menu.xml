@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Octocub_OneStepCheckout::config_link"
+             title="One Step Checkout"
+             module="Octocub_OneStepCheckout"
+             sortOrder="500"
+             parent="Magento_Backend::stores_settings"
+             action="adminhtml/system_config/edit/section/octocub_osc"
+             resource="Octocub_OneStepCheckout::config"/>
+    </menu>
+</config>

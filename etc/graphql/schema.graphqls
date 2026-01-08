@@ -1,0 +1,21 @@
+type OctocubOscConfig {
+  enabled: Boolean!
+  enable_delivery: Boolean!
+  enable_security_badges: Boolean!
+  thankyou_enabled: Boolean!
+}
+
+extend type Query {
+  octocubOscConfig: OctocubOscConfig
+    @resolver(class: "Octocub\\OneStepCheckout\\GraphQl\\Resolver\\OscConfig")
+}
+
+type OctocubOrderDelivery {
+  delivery_date: String
+  delivery_time: String
+}
+
+extend type CustomerOrder {
+  octocub_delivery: OctocubOrderDelivery
+    @resolver(class: "Octocub\\OneStepCheckout\\GraphQl\\Resolver\\OrderDelivery")
+}
